@@ -53,9 +53,33 @@ button {
 
 .paragraph-intro {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 120%;
   letter-spacing: -0.05em;
+}
+
+.heading__one,
+.heading__two {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--cl-very-dark-blue);
+}
+
+.heading__one {
+  letter-spacing: -0.04em;
+}
+
+.heading__two {
+  letter-spacing: -0.01em;
+  line-height: 110%;
+}
+
+.paragraph__body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 172%;
+  letter-spacing: 0.03em;
+  color: var(--cl-very-dark-blue);
 }
 
 /* --- --- --- --- --- --- --- --- --- --- --- ---  */
@@ -76,6 +100,8 @@ button {
   background-repeat: no-repeat;
   background-position: -34rem -24rem, 0 0;
   /* TODO: after completing the whole page, animation should be added to the background */
+
+  margin-bottom: 10.4rem;
 }
 
 /* --- --- HEADER --- --- */
@@ -129,4 +155,39 @@ img {
 .btn-cta--white {
   background-color: var(--cl-white);
   color: var(--cl-light-red);
+}
+
+/* --- --- --- --- --- --- --- --- --- --- --- ---  */
+/* --- --- --- --- MAIN PART --- --- --- --- */
+main {
+  width: 100%;
+}
+
+.product {
+  /* width: 100%; */
+  margin: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9.2rem;
+  text-align: center;
+}
+
+.product .heading__one,
+.product__illustration,
+.product .paragraph__body {
+  margin-bottom: 4.8rem;
+}
+
+.product .heading__two {
+  max-width: 30rem;
+  margin-bottom: 1.8rem;
+}
+
+.product .paragraph__body {
+  max-width: 31.2rem;
+}
+
+.product__illustration {
+  max-width: 100%;
 }
