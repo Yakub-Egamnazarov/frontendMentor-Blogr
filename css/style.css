@@ -96,6 +96,25 @@ button {
   letter-spacing: 0.04em;
 }
 
+.footer {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--cl-grayish-blue);
+}
+
+.footer__header {
+  font-weight: 700;
+}
+
+.footer__link a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+
 /* --- --- --- --- --- --- --- --- --- --- --- ---  */
 /* --- --- STYLING OF PAGE BY SECTION and LAYOUT--- ---  */
 
@@ -250,4 +269,42 @@ main {
   background-size: 61.2rem;
   background-repeat: no-repeat;
   background-position: -11.8rem -24.6rem, 0 0;
+}
+
+/* --- --- --- --- --- --- --- --- --- --- --- ---  */
+/* --- --- --- --- FOOTER --- --- --- --- */
+.footer {
+  padding: 7.2rem 0 8rem 0;
+  background-color: var(--cl-very-dark-black-blue);
+  border-radius: 0 9.4rem 0 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  width: 10.2rem;
+  height: 4rem;
+  margin-bottom: 8rem;
+}
+
+.footer__group:not(:last-child) {
+  margin-bottom: 5.8rem;
+}
+
+.footer__header {
+  margin-bottom: 3.6rem;
+}
+
+.footer__links {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__link:not(:last-child) {
+  margin-bottom: 1.6rem;
 }
