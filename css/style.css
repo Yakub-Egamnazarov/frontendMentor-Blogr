@@ -179,6 +179,33 @@ img {
   gap: 1.6rem;
 }
 
+/* --- --- Media Queries --- --- */
+@media only screen and (min-width: 834px) {
+  .title__intro {
+    margin-bottom: 2.4rem;
+  }
+
+  .paragraph-intro {
+    margin-bottom: 4.8rem;
+  }
+
+  .title__intro,
+  .paragraph-intro {
+    max-width: 80rem;
+  }
+}
+
+@media only screen and (min-width: 1228px) {
+  .intro {
+    background-image: url(../images/bg-pattern-intro-desktop.svg), var(--gc-red);
+    background-position: -44rem -134.8rem, 0 0;
+  }
+
+  .header {
+    margin-bottom: 13.2rem;
+  }
+}
+
 /* --- --- BUTTON ELEMENTS --- ---  */
 .btn-cta {
   background-color: transparent;
