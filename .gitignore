@@ -18,3 +18,4 @@
 
 # Vscode settings file
 .vscode
+.prettierrc
