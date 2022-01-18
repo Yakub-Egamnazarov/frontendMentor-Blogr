@@ -245,7 +245,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 9.2rem;
+  margin-bottom: 27rem;
 }
 
 .product:last-of-type {
@@ -352,23 +352,33 @@ main {
 /* --- --- --- --- FEATURE  --- --- --- --- */
 .feature {
   text-align: center;
-  padding-bottom: 11.4rem;
   color: var(--cl-white);
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  padding-top: 22.4rem;
   margin-bottom: 7.6rem;
+  width: 100%;
+  height: 62.4rem;
+  border-radius: 0 9.4rem;
+
+  background-image: url(../images/bg-pattern-circles.svg), var(--gc-blue);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -11.8rem -24.6rem, 0 0;
 }
 
 .feature__illustration {
+  width: 37.5rem;
+  height: 35.2rem;
   margin-bottom: 5rem;
+  background-image: url(../images/illustration-phones.svg);
+  background-size: cover;
+  position: absolute;
+  top: -17.8rem;
 }
 
 .feature__content {
   max-width: calc(100% - 3rem);
+  margin: 0 auto;
 }
 
 .title__feature {
@@ -380,24 +390,34 @@ main {
   width: 100%;
 }
 
-.feature__bg {
-  position: absolute;
-  z-index: -10;
-  top: 17.4rem;
-  width: 100%;
-  height: calc(100% - 17.4rem);
-  border-radius: 0 9.4rem;
-
-  background-image: url(../images/bg-pattern-circles.svg), var(--gc-blue);
-  background-size: 61.2rem;
-  background-repeat: no-repeat;
-  background-position: -11.8rem -24.6rem, 0 0;
-}
-
 /* --- --- --- --- Media Queries --- --- ---  */
 @media only screen and (min-width: 1228px) {
   .feature {
     margin-bottom: 31.2rem;
+    height: 39.8rem;
+    padding: 0;
+    text-align: left;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* justify-items: end; */
+  }
+
+  .feature__illustration {
+    left: 12.4rem;
+    top: -6.9rem;
+    width: 55.2rem;
+    height: 57.9rem;
+  }
+
+  .feature__content {
+    width: 50%;
+    margin: 0;
+  }
+
+  .wrapper {
+    max-width: 53.8rem;
   }
 }
 
