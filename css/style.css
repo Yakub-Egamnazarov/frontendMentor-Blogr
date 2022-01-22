@@ -36,31 +36,19 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 button {
   font-family: "Overpass", sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
-
-  border-radius: 5rem;
-  border: 1px solid var(--cl-white);
-  padding: 1.6rem 2rem;
 }
 
 /* --- --- --- --- --- --- --- --- --- --- --- ---  */
 /* --- --- TYPOGRAPHY --- ---  */
-.title__intro {
-  font-size: 3.6rem;
-  font-weight: 600;
-  line-height: 125%;
-  letter-spacing: -0.05em;
-}
-
-.paragraph-intro {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: -0.05em;
-}
 
 .heading__one,
 .heading__two {
@@ -131,32 +119,17 @@ button {
 /* --- --- --- --- --- --- --- --- --- --- --- ---  */
 /* --- --- STYLING OF PAGE BY SECTION and LAYOUT--- ---  */
 
-/* Intro Section */
-.intro {
-  height: 60rem;
-  padding: 5.6rem 2.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  color: var(--cl-white);
-  text-align: center;
-
-  background-image: url(../images/bg-pattern-intro-mobile.svg), var(--gc-red);
-  background-repeat: no-repeat;
-  background-position: -34rem -24rem, 0 0;
-  /* TODO: after completing the whole page, animation should be added to the background */
-
-  margin-bottom: 10.4rem;
-}
-
 /* --- --- HEADER --- --- */
-.header {
+.header__mobile {
+  /* margin: 5.6rem 2.4rem 0; */
+
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 11.2rem;
+
+  position: absolute;
+  /* opacity: 0; */
 }
 
 .logo {
@@ -169,58 +142,6 @@ button {
   height: 1.8rem;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.title__intro {
-  margin-bottom: 1.4rem;
-  max-width: 30rem;
-}
-
-.paragraph-intro {
-  margin-bottom: 4.4rem;
-  max-width: 30rem;
-}
-
-.cta {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-}
-
-/* --- --- --- --- --- --- --- --- --- --- --- ---  */
-/* --- --- Media Queries --- --- */
-@media only screen and (min-width: 834px) {
-  .title__intro {
-    margin-bottom: 2.4rem;
-  }
-
-  .paragraph-intro {
-    margin-bottom: 4.8rem;
-  }
-
-  .title__intro,
-  .paragraph-intro {
-    max-width: 80rem;
-  }
-}
-
-@media only screen and (min-width: 1228px) {
-  .intro {
-    background-image: url(../images/bg-pattern-intro-desktop.svg), var(--gc-red);
-    background-position: -44rem -134.8rem, 0 0;
-    margin-bottom: 15.8rem;
-  }
-
-  .header {
-    margin-bottom: 13.2rem;
-  }
-}
-
 /* --- --- BUTTON ELEMENTS --- ---  */
 .btn-cta {
   background-color: transparent;
@@ -230,6 +151,114 @@ img {
 .btn-cta--white {
   background-color: var(--cl-white);
   color: var(--cl-light-red);
+}
+
+/* --- --- --- --- --- --- --- --- --- --- --- ---  */
+/* --- --- --- --- Intro Section --- --- --- --- */
+.intro {
+  height: 60rem;
+  padding-top: 20rem;
+  border-radius: 0 0 0 9.4rem;
+
+  color: var(--cl-white);
+  text-align: center;
+  margin-bottom: 10.4rem;
+
+  /* --- background --- */
+  background-image: url(../images/bg-pattern-intro-mobile.svg), var(--gc-red);
+  background-repeat: no-repeat;
+  background-position: -34rem -24rem, 0 0;
+}
+
+.intro__content {
+  margin: 0 auto;
+  max-width: 30rem;
+}
+
+.title__intro {
+  /* --- typography */
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.05em;
+
+  /* --- layout */
+  margin: 0 auto 1.4rem;
+}
+
+.paragraph__intro {
+  /* --- typography */
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+
+  /* -- layout */
+  margin: 0 auto 4.4rem;
+}
+
+.intro__cta {
+  margin: 0 auto;
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn__cta {
+  width: 14.2rem;
+  border-radius: 5rem;
+  border: 1px solid var(--cl-white);
+  background-color: transparent;
+  color: var(--cl-white);
+  padding: 1.6rem 2rem;
+}
+
+.btn__cta--white {
+  background-color: var(--cl-white);
+  color: var(--cl-light-red);
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    background-position: -24rem -14rem, 0 0;
+  }
+
+  .intro__content {
+    max-width: 70rem;
+  }
+
+  .title__intro {
+    font-size: 4.8rem;
+    font-size: 700;
+    margin-bottom: 2.4rem;
+  }
+
+  .paragraph__intro {
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .intro {
+    padding-top: 24rem;
+    background-image: url(../images/bg-pattern-intro-desktop.svg), var(--gc-red);
+    background-position: -44.5rem -134.7rem, 0 0;
+    margin-bottom: 15.8rem;
+  }
+
+  .intro__content {
+    max-width: 95.6rem;
+  }
+
+  .title__intro {
+    font-size: 6.4rem;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+  }
+
+  /* TODO: after completing the whole page, animation should be added to the background */
 }
 
 /* --- --- --- --- --- --- --- --- --- --- --- ---  */
